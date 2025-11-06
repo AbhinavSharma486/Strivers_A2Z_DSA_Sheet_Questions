@@ -439,6 +439,259 @@
 // * D D D D
 // * E E E E E
 
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = 1; i <= n; i++)
+//   {
+//     char ch = 'A' + i - 1;
+
+//     for (int j = 1; j <= i; j++)
+//     {
+//       cout << ch << " ";
+//     }
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 17 :-
+// *       A
+// *     A B A
+// *   A B C B A
+// * A B C D C B A
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = 1; i <= n; i++)
+//   {
+//     char ch = 'A';
+
+//     for (int j = 1; j <= n - i; j++)
+//     {
+//       cout << "  ";
+//     }
+
+//     for (int k = 1; k <= i; k++)
+//     {
+//       cout << ch << " ";
+//       ch++;
+//     }
+
+//     ch -= 2;
+
+//     // decreasing part
+//     for (int k = 1; k < i; k++)
+//     {
+//       cout << ch << " ";
+//       ch--;
+//     }
+
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 18 :-
+// * E
+// * D E
+// * C D E
+// * B C D E
+// * A B C D E
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = n; i >= 1; i--)
+//   {
+
+//     char ch = 'A' + i - 1;
+
+//     for (int j = 1; j <= n - i + 1; j++)
+//     {
+//       cout << ch << " ";
+//       ch++;
+//     }
+
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 19 :-
+// * * * * * * * * * *
+// * * * *     * * * *
+// * * *         * * *
+// * *             * *
+// *                 *
+// *                 *
+// * *             * *
+// * * *         * * *
+// * * * *     * * * *
+// * * * * * * * * * *
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = 1; i <= n; i++)
+//   {
+//     for (int j = 1; j <= n - i + 1; j++)
+//     {
+//       cout << "* ";
+//     }
+
+//     for (int k = 1; k <= 2 * (i - 1); k++)
+//     {
+//       cout << "  ";
+//     }
+
+//     for (int m = 1; m <= n - i + 1; m++)
+//     {
+//       cout << "* ";
+//     }
+
+//     cout << endl;
+//   }
+
+//   for (int i = 1; i <= n; i++)
+//   {
+
+//     for (int j = 1; j <= i; j++)
+//     {
+//       cout << "* ";
+//     }
+
+//     for (int k = 1; k <= 2 * (n - i); k++)
+//     {
+//       cout << "  ";
+//     }
+
+//     for (int m = 1; m <= i; m++)
+//     {
+//       cout << "* ";
+//     }
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 20 :-
+//*                 *
+//* *             * *
+//* * *         * * *
+//* * * *     * * * *
+//* * * * * * * * * *
+//* * * *     * * * *
+//* * *         * * *
+//* *             * *
+//*                 *
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = 1; i <= n; i++)
+//   {
+//     for (int j = 1; j <= i; j++)
+//     {
+//       cout << "* ";
+//     }
+
+//     for (int k = 1; k <= 2 * (n - i); k++)
+//     {
+//       cout << "  ";
+//     }
+
+//     for (int m = 1; m <= i; m++)
+//     {
+//       cout << "* ";
+//     }
+//     cout << endl;
+//   }
+
+//   for (int i = 1; i <= n - 1; i++)
+//   {
+
+//     for (int j = n - i; j >= 1; j--)
+//     {
+//       cout << "* ";
+//     }
+
+//     for (int k = 1; k <= 2 * i; k++)
+//     {
+//       cout << "  ";
+//     }
+
+//     for (int m = n - i; m >= 1; m--)
+//     {
+//       cout << "* ";
+//     }
+
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 21 :-
+// * * * *
+// *     *
+// *     *
+// * * * *
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int n;
+//   cout << "Enter value of n : ";
+//   cin >> n;
+
+//   for (int i = 0; i < n; i++)
+//   {
+//     for (int j = 0; j < n; j++)
+//     {
+//       if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+//       {
+//         cout << "* ";
+//       }
+//       else
+//       {
+//         cout << "  ";
+//       }
+//     }
+//     cout << endl;
+//   }
+// }
+
+// & Pattern 22 :-
+// * 4 4 4 4 4 4 4
+// * 4 3 3 3 3 3 4
+// * 4 3 2 2 2 3 4
+// * 4 3 2 1 2 3 4
+// * 4 3 2 2 2 3 4
+// * 4 3 3 3 3 3 4
+// * 4 4 4 4 4 4 4
+
 #include <iostream>
 using namespace std;
 int main()
@@ -447,14 +700,21 @@ int main()
   cout << "Enter value of n : ";
   cin >> n;
 
-  for (int i = 1; i <= n; i++)
-  {
-    char ch = 'A' + i - 1;
+  int size = 2 * n - 1;
 
-    for (int j = 1; j <= i; j++)
+  for (int i = 1; i <= size; i++)
+  {
+    for (int j = 1; j <= size; j++)
     {
-      cout << ch << " ";
-    }
+      int top = i - 1;
+      int left = j - 1;
+      int right = size - j;
+      int bottom = size - i;
+
+      int ans = min(min(top, bottom), min(left, right));
+
+      cout << n - ans << " ";
+        }
     cout << endl;
   }
 }
